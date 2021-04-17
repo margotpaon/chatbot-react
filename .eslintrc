@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "import", "@typescript-eslint"],
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-use-before-define": 0,
+    "import/no-unresolved": 0,
+    "no-restricted-syntax": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "object-literal-sort-keys": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-indent": [1, "tab"],
+    "react/jsx-indent-props": [1, "tab"],
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/extensions": [
+      0,
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/prop-types": 0
+  },
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  }
+}
