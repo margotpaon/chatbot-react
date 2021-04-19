@@ -27,6 +27,7 @@ const theme = {
 
 // validação dos inputs
 const validateSchema = yup.object().shape({
+  name: yup.string().required(),
   email: yup.string().email().required(),
   data: yup
     .date()
