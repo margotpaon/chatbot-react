@@ -14,11 +14,11 @@ const configChatBot = {
 // style chatbot
 const theme = {
   background: '#f5f8fb',
-  fontFamily: 'Helvetica Neue',
-  headerBgColor: '#EF6C00',
+  fontFamily: 'Tahoma',
+  headerBgColor: '#61dafb',
   headerFontColor: '#fff',
   headerFontSize: '15px',
-  botBubbleColor: '#EF6C00',
+  botBubbleColor: '#61dafb',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
@@ -71,7 +71,7 @@ const steps = [
         return 'data invalida, digite assim 12/09/1970'
       }
 
-      const splitData = value.split('-')
+      const splitData = value.split('/')
 
       if (splitData.length !== 3) {
         return false
@@ -110,7 +110,7 @@ const steps = [
         newData.getMonth() !== month ||
         newData.getFullYear() !== year
       ) {
-        console.log('pass')
+        return false
       }
       return true
     },
